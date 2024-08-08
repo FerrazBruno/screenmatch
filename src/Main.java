@@ -1,6 +1,8 @@
+import br.com.alura.screenmatch.calculations.RecomendationFilter;
 import br.com.alura.screenmatch.calculations.TimeCalculator;
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Serie;
+import br.com.alura.screenmatch.models.Episode;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,12 +11,16 @@ public class Main {
         myMovie.setReleaseYear(1999);
         myMovie.setDurationInMinutes(135);
         myMovie.setIncludedInThePlan(true);
+        myMovie.evaluates(7.6);
+        System.out.println(myMovie.getAverage());
 
         Movie anotherMovie = new Movie();
         anotherMovie.setMovieName("John Wick");
         anotherMovie.setReleaseYear(2014);
         anotherMovie.setDurationInMinutes(101);
         anotherMovie.setIncludedInThePlan(true);
+        anotherMovie.evaluates(8.7);
+        System.out.println(anotherMovie.getAverage());
 
         Serie serie = new Serie();
         serie.setMovieName("La Casa de Papel");
@@ -31,5 +37,15 @@ public class Main {
         calculator.insert(serie);
 
         System.out.println("Total time: " +calculator.getTotalTime());
+
+        Episode first = new Episode();
+        first.setNumber(1);
+        first.setSerie(serie);
+        first.setTotalVisualizations(300);
+
+        RecomendationFilter filter = new RecomendationFilter();
+        filter.filter(myMovie);
+        filter.filter(anotherMovie);
+        filter.filter(first);
     }
 }
