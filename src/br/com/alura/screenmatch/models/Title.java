@@ -24,8 +24,16 @@ public class Title {
         return sumOfRating / overallRating;
     }
 
+    public String getMovieName() {
+        return this.movieName;
+    }
+
     public void setMovieName(String movieName) {
         this.movieName = movieName;
+    }
+
+    public int getReleaseYear() {
+        return this.releaseYear;
     }
 
     public void setReleaseYear(int releaseYear) {
