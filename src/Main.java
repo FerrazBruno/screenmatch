@@ -8,25 +8,19 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Movie myMovie = new Movie();
-        myMovie.setMovieName("The Matrix");
-        myMovie.setReleaseYear(1999);
+        Movie myMovie = new Movie("The Matrix", 1999);
         myMovie.setDurationInMinutes(135);
         myMovie.setIncludedInThePlan(true);
         myMovie.evaluates(7.6);
         System.out.println(myMovie.getAverage());
 
-        Movie anotherMovie = new Movie();
-        anotherMovie.setMovieName("John Wick");
-        anotherMovie.setReleaseYear(2014);
+        Movie anotherMovie = new Movie("John Wick", 2014);
         anotherMovie.setDurationInMinutes(101);
         anotherMovie.setIncludedInThePlan(true);
         anotherMovie.evaluates(8.7);
         System.out.println(anotherMovie.getAverage());
 
-        Serie serie = new Serie();
-        serie.setMovieName("La Casa de Papel");
-        serie.setReleaseYear(2017);
+        Serie serie = new Serie("La Casa de Papel", 2017);
         serie.setIncludedInThePlan(true);
         serie.setActive(true);
         serie.setSeasons(5);
