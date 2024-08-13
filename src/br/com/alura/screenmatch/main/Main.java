@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.main;
+
 import br.com.alura.screenmatch.calculations.RecomendationFilter;
 import br.com.alura.screenmatch.calculations.TimeCalculator;
 import br.com.alura.screenmatch.models.Movie;
@@ -51,5 +53,7 @@ public class Main {
         System.out.println("List size: " + movieList.size());
         System.out.println("First movie: " + movieList.getFirst());
         System.out.println(movieList);
+
+
     }
 }
