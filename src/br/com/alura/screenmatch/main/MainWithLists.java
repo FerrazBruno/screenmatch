@@ -5,6 +5,7 @@ import br.com.alura.screenmatch.models.Serie;
 import br.com.alura.screenmatch.models.Title;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MainWithLists {
     public static void main(String[] args) {
@@ -16,10 +17,13 @@ public class MainWithLists {
 
         Serie serie = new Serie("La Casa de Papel", 2017);
 
-        ArrayList<Title> list = new ArrayList<Title>();
+        ArrayList<Title> list = new ArrayList<>();
         list.add(favorite);
         list.add(another);
         list.add(serie);
+
+        Collections.sort(list);
+        System.out.println(list);
 
         for (Title item: list) {
             System.out.println("Name: " +item.getMovieName());

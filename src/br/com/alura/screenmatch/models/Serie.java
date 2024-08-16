@@ -47,4 +47,9 @@ public class Serie extends Title {
     public int getDurationInMinutes() {
         return seasons * episodesPerSeasons * minutesPerEpisode;
     }
+
+    @Override
+    public String toString() {
+        return "Serie: " + this.getMovieName() + "(" + this.getReleaseYear() + ")";
+    }
 }

@@ -1,6 +1,6 @@
 package br.com.alura.screenmatch.models;
 
-public class Title {
+public class Title implements Comparable<Title> {
     private String movieName;
     private int releaseYear;
     private boolean includedInThePlan;
@@ -11,6 +11,10 @@ public class Title {
     public Title(String movieName, int releaseYear) {
         this.movieName = movieName;
         this.releaseYear = releaseYear;
+    }
+
+    public int compareTo(Title anotherTitle) {
+        return this.getMovieName().compareTo(anotherTitle.getMovieName());
     }
 
     public void displaysDataSheet() {
