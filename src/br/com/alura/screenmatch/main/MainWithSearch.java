@@ -18,7 +18,7 @@ public class MainWithSearch {
         Scanner input = new Scanner(System.in);
         System.out.println("Type the movie to search: ");
         var search = input.next();
-        String apiKey = "3cc7e0de";
+        String apiKey = "API_KEY";
         String address = "http://www.omdbapi.com/?t=" + search + "&apikey=" + apiKey;
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
