@@ -1,0 +1,18 @@
+[
+  {
+    "MovieName": "Matrix",
+    "ReleaseYear": 1993,
+    "IncludedInThePlan": false,
+    "SumOfRating": 0.0,
+    "OverallRating": 0,
+    "DurationInMinutes": 60
+  },
+  {
+    "MovieName": "Dogville",
+    "ReleaseYear": 2003,
+    "IncludedInThePlan": false,
+    "SumOfRating": 0.0,
+    "OverallRating": 0,
+    "DurationInMinutes": 17
+  }
+]
